@@ -64,15 +64,23 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        /* MARCO CAFÉ SUAVE CON LUCES */
+        /* MARCO GRIS CON EFECTO LUCES */
         .gallery img {
-            border: 8px solid #A0522D; /* café suave */
-            box-shadow: 0 0 10px #A0522D, 0 0 20px #A0522D, 0 0 30px #A0522D; /* luces suaves */
+            border: 8px solid #888888; /* gris */
+            box-shadow: 0 0 10px #888888, 0 0 20px #888888, 0 0 30px #888888;
+            animation: glow 2s infinite alternate;
         }
 
         .gallery img:hover {
             transform: scale(1.06);
-            box-shadow: 0 0 15px #A0522D, 0 0 30px #A0522D, 0 0 45px #A0522D; /* más brillante al pasar mouse */
+            box-shadow: 0 0 20px #888888, 0 0 40px #888888, 0 0 60px #888888;
+        }
+
+        /* Animación suave de resplandor */
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #888888, 0 0 10px #888888, 0 0 15px #888888; }
+            50% { box-shadow: 0 0 15px #888888, 0 0 30px #888888, 0 0 45px #888888; }
+            100% { box-shadow: 0 0 10px #888888, 0 0 20px #888888, 0 0 30px #888888; }
         }
     </style>
 </head>
