@@ -62,16 +62,12 @@ body {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* MARCO GRIS DELGADO CON EFECTO LUCES */
-.gallery img {
     border: 3px solid #888888;
     box-shadow: 0 0 8px #888888, 0 0 16px #888888, 0 0 24px #888888;
     animation: glow 2s infinite alternate;
 }
 
-.gallery img:hover {
+.gallery img:hover, .gallery video:hover {
     transform: scale(1.06);
     box-shadow: 0 0 12px #888888, 0 0 24px #888888, 0 0 36px #888888;
 }
@@ -99,11 +95,9 @@ body {
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">PAEC</a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="menuNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item"><a class="nav-link" href="part2.html" target="_blank">Parte 2</a></li>
@@ -147,6 +141,7 @@ body {
 
 </body>
 </html>
+
 
 
 
