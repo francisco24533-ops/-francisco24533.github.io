@@ -16,16 +16,27 @@
             color: #fff;
         }
 
-        /* --- VIDEO DE FONDO --- */
-        #video-fondo {
+        /* --- VIDEO DE FONDO YOUTUBE --- */
+        #video-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            overflow: hidden;
             z-index: -1;
-            filter: brightness(0.4);
+        }
+
+        #video-bg iframe {
+            width: 100vw;
+            height: 56.25vw; /* relación 16:9 */
+            min-height: 100vh;
+            min-width: 177.77vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: brightness(0.45);
         }
 
         .container-custom {
@@ -68,17 +79,19 @@
         .gallery img:hover, .gallery video:hover {
             transform: scale(1.05);
         }
-        .video{
-            background-video:(´https://mx.pinterest.com/pin/371617406767297663/´);
-        }
     </style>
 </head>
 <body>
 
-<!-- 🎥 VIDEO DE FONDO -->
-
-    
-</video>
+<!-- 🎥 VIDEO DE FONDO DESDE YOUTUBE -->
+<div id="video-bg">
+    <iframe 
+        src="https://www.youtube.com/embed/7Ilu033ydSw?autoplay=1&mute=1&loop=1&playlist=7Ilu033ydSw&controls=0&showinfo=0&modestbranding=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+    </iframe>
+</div>
 
 <!-- 🌐 MENÚ BOOTSTRAP -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75">
@@ -145,6 +158,8 @@
 
 </body>
 </html>
+
+
 
 
 
