@@ -61,17 +61,18 @@
         .gallery img, .gallery video {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
-            transition: .3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        /* MARCO VERDE PARA LAS IMÁGENES */
+        /* MARCO VERDE CON LUCES */
         .gallery img {
-            border: 5px solid limegreen;
+            border: 8px solid limegreen; /* marco grueso verde */
+            box-shadow: 0 0 15px limegreen, 0 0 30px limegreen, 0 0 45px limegreen; /* efecto luces */
         }
 
-        .gallery img:hover, .gallery video:hover {
+        .gallery img:hover {
             transform: scale(1.06);
+            box-shadow: 0 0 25px limegreen, 0 0 50px limegreen, 0 0 75px limegreen; /* más brillante al pasar mouse */
         }
     </style>
 </head>
