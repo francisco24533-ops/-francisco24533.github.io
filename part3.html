@@ -9,28 +9,65 @@
         body {margin:0;padding:0;font-family:Arial,sans-serif;color:white;overflow-x:hidden;}
         #video-container {position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:-1;}
         #video-container iframe {position:absolute;width:100vw;height:56.25vw;min-width:177.77vh;min-height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;filter:brightness(0.45);}
-        .container-custom {max-width:1200px;margin:60px auto;padding:30px;background:rgba(0,0,0,0.45);border-radius:12px;backdrop-filter:blur(6px);}
-        .gallery {display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;padding:10px;}
-        .gallery img {width:100%;border-radius:10px;border:5px solid #888888;box-shadow:0 0 8px #888888,0 0 16px #888888,0 0 24px #888888;transition:all .3s;animation:glow 2s infinite alternate;}
-        .gallery img:hover {transform:scale(1.06);box-shadow:0 0 12px #888888,0 0 24px #888888,0 0 36px #888888;}
-        @keyframes glow {0%{box-shadow:0 0 5px #888888,0 0 10px #888888,0 0 15px #888888}50%{box-shadow:0 0 10px #888888,0 0 20px #888888,0 0 30px #888888}100%{box-shadow:0 0 8px #888888,0 0 16px #888888,0 0 24px #888888}}
-        h2 {text-align:center;font-size:2.8rem;margin-bottom:30px;text-shadow:0 0 15px rgba(255,255,255,0.4);}
+
+        .container-custom {max-width:1400px;margin:80px auto;padding:40px;background:rgba(0,0,0,0.5);border-radius:15px;backdrop-filter:blur(8px);}
+
+        /* GALERÍA CON IMÁGENES MUCHO MÁS GRANDES */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); /* ← AQUÍ LAS HICE MÁS GRANDES */
+            gap: 30px;           /* más espacio entre ellas */
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;           /* permite que sean muy altas si quieres */
+            object-fit: cover;          /* evita que se deformen */
+            border-radius: 16px;
+            border: 7px solid #888888;  /* marco más grueso */
+            box-shadow: 0 0 15px #888888, 0 0 30px #888888, 0 0 50px rgba(136,136,136,0.8);
+            transition: all 0.4s ease;
+            animation: glow 2.5s infinite alternate;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.08);
+            border: 7px solid #aaaaaa;
+            box-shadow: 0 0 25px #aaaaaa, 0 0 50px #aaaaaa, 0 0 80px rgba(170,170,170,0.9);
+        }
+
+        @keyframes glow {
+            0%   { box-shadow: 0 0 15px #888888, 0 0 30px #888888, 0 0 50px rgba(136,136,136,0.6); }
+            100% { box-shadow: 0 0 25px #aaaaaa, 0 0 50px #aaaaaa, 0 0 80px rgba(170,170,170,0.9); }
+        }
+
+        h2 {
+            text-align:center;
+            font-size:3.5rem;
+            margin-bottom:40px;
+            text-shadow:0 0 20px rgba(255,255,255,0.6);
+            letter-spacing:2px;
+        }
     </style>
 </head>
 <body>
     <div id="video-container">
-        <iframe src="https://www.youtube.com/embed/7Ilu033ydSw?autoplay=1&mute=1&controls=0&loop=1&playlist=7Ilu033ydSw&modestbranding=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/7Ilu033ydSw?autoplay=1&mute=1&controls=0&loop=1&playlist=7Ilu033ydSw&modestbranding=1&rel=0" 
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="index.html">PAEC</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="menuNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html" target="_blank">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="part2.html" target="_blank">Parte 2</a></li>
-                    
                     <li class="nav-item"><a class="nav-link" href="part4.html" target="_blank">Parte 4</a></li>
                     <li class="nav-item"><a class="nav-link" href="part5.html" target="_blank">Parte 5</a></li>
                 </ul>
@@ -41,16 +78,13 @@
     <div class="container-custom">
         <h2>EVIDENCIAS 2</h2>
         <div class="gallery">
-            <img src="c7.jpeg" alt="">
-            <img src="c8.jpeg" alt="">
-            <img src="c9.jpeg" alt="">
-            <img src="c10.jpeg" alt="">
+            <img src="./c7.jpeg" alt="Evidencia 7" loading="lazy">
+            <img src="./c8.jpeg" alt="Evidencia 8" loading="lazy">
+            <img src="./c9.jpeg" alt="Evidencia 9" loading="lazy">
+            <img src="./c10.jpeg" alt="Evidencia 10" loading="lazy">
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
