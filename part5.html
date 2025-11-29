@@ -49,7 +49,6 @@
             0% { box-shadow: 0 0 20px #888888, 0 0 40px #888888, 0 0 70px rgba(136,136,136,0.7); }
             100% { box-shadow: 0 0 35px #bbbbbb, 0 0 70px #bbbbbb, 0 0 110px rgba(187,187,187,0.95); }
         }
-        /* Botón de descarga bonito */
         .download-btn {
             display: inline-block;
             margin: 40px auto;
@@ -68,6 +67,19 @@
             transform: translateY(-5px);
             box-shadow: 0 0 40px rgba(0,206,209,0.9);
             background: linear-gradient(45deg, #00ced1, #1e90ff);
+        }
+        /* Despedida final */
+        .farewell {
+            margin-top: 80px;
+            padding: 40px;
+            font-size: 2.4rem;
+            font-weight: bold;
+            text-shadow: 0 0 25px rgba(255,255,255,0.8);
+            animation: pulse 4s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.9; }
+            50% { opacity: 1; text-shadow: 0 0 40px white; }
         }
     </style>
 </head>
@@ -96,7 +108,7 @@
         </div>
     </nav>
 
-    <!-- CONTENIDO -->
+    <!-- CONTENIDO PRINCIPAL -->
     <div class="container-custom">
         <h2>CONCLUSIONES</h2>
         <h2>BENEFICIOS:<br>
@@ -106,13 +118,24 @@
             Escogimos el parque de la colonia Lindavista (el cual no tiene nombre oficial). Este parque tiene el tamaño ideal para limpiar y se nos facilitó mucho el acceso y trabajo.
         </h2>
 
-        <!-- BOTÓN DE DESCARGA DEL CRONOGRAMA -->
+        <!-- BOTÓN DESCARGA CRONOGRAMA -->
         <a href="cronograma.xlsx" download class="download-btn">
             Descargar Cronograma (Excel)
         </a>
 
         <div class="gallery">
             <img src="./c90.jpeg" alt="Parque Lindavista - Antes y después" loading="lazy">
+        </div>
+
+        <!-- IMAGEN FINAL (puedes usar foto del equipo, del parque limpio, abrazo, etc.) -->
+        <div class="gallery" style="margin-top: 60px;">
+            <img src="gracias.jpeg" alt="Equipo PAEC - ¡Gracias!" loading="lazy">
+        </div>
+
+        <!-- DESPEDIDA FINAL -->
+        <div class="farewell">
+            ¡GRACIAS POR LEER NUESTRO PROYECTO!<br>
+            <span style="font-size: 2rem;">♡ Equipo PAEC ♡</span>
         </div>
     </div>
 
