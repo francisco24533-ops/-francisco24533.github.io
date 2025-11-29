@@ -9,12 +9,12 @@
         body{margin:0;padding:0;font-family:Arial,sans-serif;color:white;overflow-x:hidden;}
         #video-container{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:-1;}
         #video-container iframe{position:absolute;width:100vw;height:56.25vw;min-width:177.77vh;min-height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;filter:brightness(0.45);}
-        .container-custom{max-width:1200px;margin:80px auto;padding:40px;background:rgba(0,0,0,0.5);border-radius:15px;backdrop-filter:blur(8px);}
+        .container-custom{max-width:1400px;margin:80px auto;padding:40px;background:rgba(0,0,0,0.5);border-radius:15px;backdrop-filter:blur(8px);}
         .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:30px;padding:20px;}
         .gallery img{width:100%;height:auto;border-radius:16px;border:7px solid #888888;box-shadow:0 0 15px #888888,0 0 30px #888888,0 0 50px rgba(136,136,136,0.8);transition:all .4s;animation:glow 2.5s infinite alternate;object-fit:cover;}
         .gallery img:hover{transform:scale(1.08);box-shadow:0 0 25px #aaa,0 0 50px #aaa,0 0 80px rgba(170,170,170,0.9);}
         @keyframes glow{0%{box-shadow:0 0 15px #888888,0 0 30px #888888,0 0 50px rgba(136,136,136,0.6)}100%{box-shadow:0 0 25px #aaa,0 0 50px #aaa,0 0 80px rgba(170,170,170,0.9)}}
-        h2{text-align:center;font-size:3.5rem;margin-bottom:40px;text-shadow:0 0 20px rgba(255,255,255,0.6);}
+        h2{text-align:center;font-size:3.5rem;margin-bottom:40px;text-shadow:0 0 20px rgba(255,255,255,0.6);letter-spacing:2px;}
     </style>
 </head>
 <body>
@@ -25,7 +25,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="index.html">PAEC</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="menuNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -41,23 +43,16 @@
     <div class="container-custom">
         <h2>EVIDENCIAS 3</h2>
         <div class="gallery">
-            <!-- ELIGE UNA DE LAS DOS LÍNEAS: -->
-            <!-- Si tus archivos se llaman c16.jpeg, c17.jpeg → usa esto: -->
-            <img src="./c16.jpeg" alt="16" loading="lazy">
-            
-            <img src="./c18.jpeg" alt="18" loading="lazy">
-            <img src="./c19.jpeg" alt="19" loading="lazy">
-            <img src="./c20.jpeg" alt="20" loading="lazy">
-
-            <!-- O si los renombraste a minúsculas → usa esto: -->
-            <!-- <img src="c16.jpg" alt="16" loading="lazy"> -->
+            <img src="./c16.jpeg" alt="Evidencia 16" loading="lazy">
+            <img src="./c18.jpeg" alt="Evidencia 18" loading="lazy">
+            <img src="./c19.jpeg" alt="Evidencia 19" loading="lazy">
+            <img src="./c20.jpeg" alt="Evidencia 20" loading="lazy">
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
 
 
 
