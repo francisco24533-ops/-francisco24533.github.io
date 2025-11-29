@@ -68,18 +68,17 @@
             box-shadow: 0 0 40px rgba(0,206,209,0.9);
             background: linear-gradient(45deg, #00ced1, #1e90ff);
         }
-        /* Despedida final */
         .farewell {
-            margin-top: 80px;
-            padding: 40px;
-            font-size: 2.4rem;
+            margin: 80px 0 40px;
+            padding: 30px;
+            font-size: 3rem;
             font-weight: bold;
-            text-shadow: 0 0 25px rgba(255,255,255,0.8);
+            text-shadow: 0 0 30px rgba(255,255,255,0.9);
             animation: pulse 4s infinite;
         }
         @keyframes pulse {
             0%, 100% { opacity: 0.9; }
-            50% { opacity: 1; text-shadow: 0 0 40px white; }
+            50% { opacity: 1; text-shadow: 0 0 50px white; }
         }
     </style>
 </head>
@@ -108,7 +107,7 @@
         </div>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- CONTENIDO -->
     <div class="container-custom">
         <h2>CONCLUSIONES</h2>
         <h2>BENEFICIOS:<br>
@@ -118,7 +117,6 @@
             Escogimos el parque de la colonia Lindavista (el cual no tiene nombre oficial). Este parque tiene el tamaño ideal para limpiar y se nos facilitó mucho el acceso y trabajo.
         </h2>
 
-        <!-- BOTÓN DESCARGA CRONOGRAMA -->
         <a href="cronograma.xlsx" download class="download-btn">
             Descargar Cronograma (Excel)
         </a>
@@ -127,22 +125,19 @@
             <img src="./c90.jpeg" alt="Parque Lindavista - Antes y después" loading="lazy">
         </div>
 
-        <!-- IMAGEN FINAL (puedes usar foto del equipo, del parque limpio, abrazo, etc.) -->
-        <div class="gallery" style="margin-top: 60px;">
-            <img src="nieves.jpeg" alt="Equipo PAEC - ¡Gracias!" loading="lazy">
-        </div>
-
-        <!-- DESPEDIDA FINAL -->
+        <!-- DESPEDIDA PRIMERO -->
         <div class="farewell">
             ¡GRACIAS POR LEER NUESTRO PROYECTO!<br>
-            <span style="font-size: 2rem;">♡ Equipo PAEC ♡</span>
+            <span style="font-size: 2.2rem;">Equipo PAEC</span>
+        </div>
+
+        <!-- FOTO DEL EQUIPO DESPUÉS -->
+        <div class="gallery" style="margin-top: 20px;">
+            <img src="equipo.jpeg" alt="Equipo PAEC - ¡Gracias!" loading="lazy">
+            <!-- ↑↑↑ Cambia "equipo.jpeg" por el nombre real y simple de tu foto ↑↑↑ -->
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
