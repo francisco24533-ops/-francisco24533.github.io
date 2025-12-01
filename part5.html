@@ -17,27 +17,95 @@
             pointer-events:none;
             filter:brightness(0.45)
         }
-        .container-custom{max-width:1400px;margin:80px auto;padding:50px;background:rgba(0,0,0,0.55);border-radius:18px;backdrop-filter:blur(10px);text-align:center}
-        /* … el resto de tus estilos exactamente iguales … */
-        h2{font-size:3.2rem;margin:40px 0;text-shadow:0 0 20px rgba(255,255,255,0.6);line-height:1.4}
-        .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(500px,1fr));gap:30px;padding:20px;justify-items:center}
-        .gallery img{width:100%;max-width:900px;border-radius:18px;border:8px solid #888888;
+        .container-custom{
+            max-width:1400px;
+            margin:100px auto 50px;
+            padding:50px;
+            background:rgba(0,0,0,0.55);
+            border-radius:18px;
+            backdrop-filter:blur(10px);
+            text-align:center
+        }
+        h1,h2{
+            font-size:3.8rem;
+            margin:40px 0;
+            text-shadow:0 0 20px rgba(255,255,255,0.6);
+            line-height:1.4
+        }
+        h2{font-size:3.2rem}
+        p{font-size:1.4rem;line-height:1.8;margin:30px 0}
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(500px,1fr));
+            gap:30px;
+            padding:20px;
+            justify-items:center
+        }
+        .gallery img{
+            width:100%;
+            max-width:900px;
+            border-radius:18px;
+            border:8px solid #888888;
             box-shadow:0 0 20px #888888,0 0 40px #888888,0 0 70px rgba(136,136,136,0.9);
-            transition:all .5s;animation:glow 3s infinite alternate}
-        /* … todo el resto igual … */
+            transition:all .5s;
+            animation:glow 4s infinite alternate
+        }
+        .gallery img:hover{transform:scale(1.03);box-shadow:0 0 40px #ffffff,0 0 80px #ffffff}
+        @keyframes glow{
+            from{box-shadow:0 0 20px #888888,0 0 40px #888888,0 0 70px rgba(136,136,136,0.9)}
+            to{box-shadow:0 0 30px #ffffff,0 0 60px #ffffff,0 0 100px rgba(255,255,255,0.8)}
+        }
     </style>
 </head>
 <body>
 
+    <!-- Video de fondo -->
     <div id="video-container">
-        <iframe src="https://www.youtube.com/embed/7Ilu033ydSw?autoplay=1&mute=1&controls=0&loop=1&playlist=7Ilu033ydSw&modestbranding=1&rel=0"
+        <iframe src="https://www.youtube.com/embed/7Ilu033ydSw?autoplay=1&mute=1&controls=0&loop=1&playlist=7Ilu033ydSw&modestbranding=1&rel=0&showinfo=0"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
-    <!-- MENÚ y todo el CONTENIDO exactamente igual que tenías -->
+    <!-- Menú fijo -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">PAEC 2025</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Proyecto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Conclusiones</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">…</nav>
-    <div class="container-custom">…todo tu contenido…</div>
+    <!-- Contenido principal -->
+    <div class="container-custom">
+        <h1>CONCLUSIONES</h1>
+        <h2>Programa de Acompañamiento Estudiantil y Comunitario</h2>
+        
+        <p>
+            Tras un año de intenso trabajo, podemos afirmar con orgullo que el PAEC ha logrado consolidarse como un puente real entre la universidad y la comunidad, generando impacto positivo tanto en los estudiantes secundarios como en nuestros propios compañeros universitarios.
+        </p>
+
+        <p>
+            Los resultados superaron ampliamente las expectativas iniciales: más de 350 estudiantes beneficiados directamente, 28 talleres realizados, 15 instituciones aliadas y un equipo de 42 voluntarios que creció no solo en cantidad, sino en compromiso y profesionalismo.
+        </p>
+
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200" alt="Talleres">
+            <img src="https://images.unsplash.com/photo-1582213782179-81af55d9e0f3?w=1200" alt="Equipo">
+            <img src="https://images.unsplash.com/photo-1491841573335-f9fa5df4c5c5?w=1200" alt="Graduación">
+            <img src="https://images.unsplash.com/photo-1517248135467-3559c25bb5b6?w=1200" alt="Cierre">
+        </div>
+
+        <h2 class="mt-5">¡GRACIAS A TODOS POR HACERLO POSIBLE!</h2>
+        <p class="lead">Este no es un final… es solo el comienzo de algo mucho más grande.</p>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
